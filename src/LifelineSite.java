@@ -13,7 +13,6 @@ public class LifelineSite{
         return this.units * this.rate * 0.5;
     }
 
-
     public double getTax() {
         return getBase() * Site.TAX_RATE * 0.2;
     }
