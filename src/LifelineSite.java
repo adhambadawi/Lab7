@@ -1,7 +1,7 @@
-public class LifelineSite {
+public class LifelineSite{
 
-    private static double units = 5;
-    private static double rate = 15;
+    private double units;
+    private double rate;
 
     public LifelineSite() {
     }
@@ -9,14 +9,12 @@ public class LifelineSite {
         return getBase() + getTax();
     }
 
-    private static double getTax() {
-        double tax = getBase() * Site.TAX_RATE * 0.2;
-        return tax;
+    public double getBase() {
+        return this.units * this.rate * 0.5;
     }
 
-    private static double getBase() {
-        double base = units * rate * 0.5;
-        return base;
-    }
 
+    public double getTax() {
+        return getBase() * Site.TAX_RATE * 0.2;
+    }
 }
